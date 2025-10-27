@@ -11,7 +11,7 @@
 <p>A huge unlock was getting CC to play different roles on the project.  A single threaded CC instance takes forever, and the context gets very muddled with different concerns.  By spinning up separate CC instances with dedicated personas, they can work together as a team of specialists.  Their context stays small &amp; on-mission for a specific goal.  In my workflow, this could be requirements planning, architectural design, feature development, code optimization or devops functions.</p>
 <h2 id="tools">Tools</h2>
 <p><strong>Claude Code CLI</strong><br>
-I work exclusively through the Claude Code CLI.  It knows how to run all my secondary tools via MCP or CLI.    I am interested in using the web interface to do on-the go development.  As a CLI, you can run it right in your IDE.  I ran it for a while in Cursor and VSCode, but have since decided that I like to run it standalone with VSCode open for rare direct file edits.  <em>Side note: if you want to use our company’s Bedrock API key for access to Anthropic models, you need to use the CLI.</em></p>
+I work exclusively through the Claude Code CLI.  It knows how to run all my secondary tools via MCP or CLI.    I am interested in using the web interface to do on-the go development.  As a CLI, you can run it right in your IDE.  I ran it for a while in Cursor and VSCode, but have since decided that I like to run it standalone with VSCode open for rare direct file edits.  <em>Side note: while the CLI works with API token pay as you go licensing, the web version only works with a paid Claude account.</em></p>
 <p><strong>MCP’s</strong><br>
 There are a ton of these, and I’ve really just dipped my toe in the waters here.  The MCP I use most often is MS Playwright, which gives CC the ability to see and drive the app it’s building.  This is huge, and saves me a ton of time pasting console logs or taking screenshots.</p>
 <p><strong>Github</strong><br>
@@ -32,7 +32,7 @@ When I’m ready to move forward, I will then hand the feature off to my optimiz
 <p><strong>Deployment</strong><br>
 When I am ready to deploy, I tell my devops instance of claudecode what environment I want to target.  It handles the entire process.</p>
 <h2 id="setup">Setup</h2>
-<p>First, you need a Claude Code account with enough capacity to handle your development workload.  I found that with a multi-worker setup, I need a lot more tokens than a single instance implementation.  When it is approved, we will have a mechanism for allocating enterprise keys to internal CC developers.</p>
+<p>First, you need a Claude Code account with enough capacity to handle your development workload.  I found that with a multi-worker setup, I need a lot more tokens than a single instance implementation.</p>
 <p><strong>Claude Code</strong></p>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g @anthropic-ai/claude-code
 </code></pre>
